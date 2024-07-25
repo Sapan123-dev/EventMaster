@@ -15,6 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link as RouterLink } from 'react-router-dom';
 
 const StyledTitle = styled(Typography)(({ theme }) => ({
   flexGrow: 1,
@@ -58,8 +59,11 @@ const Header: React.FC = () => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {menuItems.map((item) => (
-          <ListItem key={item.text}>
+        {menuItems.map((item, index) => (
+          <ListItem key={item.text}
+          component={RouterLink}
+          to={item.path}
+          >
             <ListItemText primary={item.text} />
           </ListItem>
         ))}

@@ -1,10 +1,15 @@
 import Footer from "../common/Footer";
 import Header from "../common/Header";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "../../routes/route";
 
 const MainLayout: React.FC = () => {
   return (
     <>
-      <Header />
+    <BrowserRouter>
+    <Header />
+    <AppRoutes />
+    </BrowserRouter>
       <Footer />
     </>
   );
