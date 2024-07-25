@@ -1,0 +1,39 @@
+showbooker/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Header.tsx
+│   │   │   └── Footer.tsx (to be created)
+│   │   ├── layout/
+│   │   │   └── MainLayout.tsx
+│   │   └── feature-specific/
+│   │       ├── MovieList.tsx (to be created)
+│   │       └── EventList.tsx (to be created)
+│   ├── pages/
+│   │   ├── HomePage.tsx
+│   │   ├── MoviesPage.tsx (to be created)
+│   │   ├── EventsPage.tsx (to be created)
+│   │   ├── MovieDetailsPage.tsx (to be created)
+│   │   └── EventDetailsPage.tsx (to be created)
+│   ├── services/
+│   │   └── api.ts (to be created)
+│   ├── store/
+│   │   ├── index.ts (Redux store setup)
+│   │   ├── moviesSlice.ts (to be created)
+│   │   └── eventsSlice.ts (to be created)
+│   ├── hooks/
+│   │   └── reduxHooks.ts (to be created)
+│   ├── types/
+│   │   ├── Movie.ts (to be created)
+│   │   └── Event.ts (to be created)
+│   ├── utils/
+│   │   └── helpers.ts (to be created, if needed)
+│   ├── App.tsx
+│   └── index.tsx
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── README.md
