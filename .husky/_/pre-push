@@ -1,0 +1,9 @@
+# .husky/pre-push
+#!/bin/sh
+branch="$(git rev-parse --abbrev-ref HEAD)"
+remote="$(git config --get remote.origin.url)"
+
+if [ "$branch" = "main" ] ; then
+    echo "Pushing to the main branch is not allowed. Please create a pull request."
+    exit 1
+fi
