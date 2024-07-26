@@ -15,7 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 
 const StyledTitle = styled(Typography)(({ theme }) => ({
   flexGrow: 1,
@@ -60,10 +60,7 @@ const Header: React.FC = () => {
     >
       <List>
         {menuItems.map((item, index) => (
-          <ListItem key={item.text}
-          component={RouterLink}
-          to={item.path}
-          >
+          <ListItem key={item.text} component={RouterLink} to={item.path}>
             <ListItemText primary={item.text} />
           </ListItem>
         ))}
@@ -89,10 +86,22 @@ const Header: React.FC = () => {
               <MenuIcon />
             </StyledMenuButton>
           )}
-          <StyledTitle variant="h6">ShowBooker</StyledTitle>
+          <StyledTitle variant="h6">
+            <RouterLink
+              to="/"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              ShowBooker
+            </RouterLink>
+          </StyledTitle>
           <StyledNavButtons>
             {menuItems.map((item) => (
-              <Button key={item.text} color="inherit">
+              <Button
+                key={item.text}
+                color="inherit"
+                component={RouterLink}
+                to={item.path}
+              >
                 {item.text}
               </Button>
             ))}

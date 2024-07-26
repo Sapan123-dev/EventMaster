@@ -1,17 +1,17 @@
 import Footer from "../common/Footer";
 import Header from "../common/Header";
-import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "../../routes/route";
 
-const MainLayout: React.FC = () => {
+interface MainLayoutProps {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <>
-    <BrowserRouter>
-    <Header />
-    <AppRoutes />
-    </BrowserRouter>
+    <div>
+      <Header />
+      <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 
